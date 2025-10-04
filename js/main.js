@@ -19,6 +19,32 @@ const treningsForm = document.getElementById('treningsForm');
 const treningshistorikk = document.getElementById('treningshistorikk');
 const leggTilOvelseBtn = document.getElementById('leggTilOvelse');
 
+// Funksjon for å håndtere sett-knapper
+function setupSettHandlers(container) {
+    const leggTilSettBtns = container.querySelectorAll('.legg-til-sett');
+    leggTilSettBtns.forEach(btn => {
+        if (!btn.hasEventListener) {
+            btn.hasEventListener = true;
+            btn.addEventListener('click', () => {
+                const settContainer = btn.closest('.sett-container');
+                const nyttSett = document.createElement('div');
+                nyttSett.className = 'sett-gruppe';
+                nyttSett.innerHTML = `
+                    <input type="number" class="vekt" placeholder="Vekt (kg)" required min="0">
+                    <input type="number" class="reps" placeholder="Reps" required min="1">
+                    <button type="button" class="fjern-sett">-</button>
+                `;
+                settContainer.appendChild(nyttSett);
+                
+                const fjernSettBtn = nyttSett.querySelector('.fjern-sett');
+                fjernSettBtn.addEventListener('click', () => {
+                    nyttSett.remove();
+                });
+            });
+        }
+    });
+}
+
 // Funksjon for å legge til ny øvelse i skjemaet
 if (leggTilOvelseBtn) {
     leggTilOvelseBtn.addEventListener('click', () => {

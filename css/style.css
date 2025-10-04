@@ -145,6 +145,13 @@ button:hover {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    padding-bottom: 70px; /* Gir plass til footer */
+}
+
 /* Footer styling */
 footer {
     text-align: center;
@@ -154,4 +161,12 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 100;
+}
+
+.knapper {
+    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
 }
