@@ -66,12 +66,54 @@ input, select {
 }
 
 .ovelse {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 1rem;
     margin-bottom: 1rem;
     padding: 1rem;
     background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.ovelse select {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.sett-container {
+    margin-top: 0.5rem;
+}
+
+.sett-gruppe {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    align-items: center;
+}
+
+.sett-gruppe input {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.sett-gruppe button {
+    padding: 0.5rem 1rem;
+    margin: 0;
+}
+
+#kommentar {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+#bilde-preview {
+    margin-top: 1rem;
+    max-width: 100%;
+}
+
+#bilde-preview img {
+    max-width: 100%;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }

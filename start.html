@@ -34,16 +34,69 @@
                 <div class="ovelse">
                     <select class="ovelse-navn" required>
                         <option value="">Velg øvelse</option>
-                        <option value="Benkpress">Benkpress</option>
-                        <option value="Knebøy">Knebøy</option>
-                        <option value="Markløft">Markløft</option>
-                        <option value="Skulderpress">Skulderpress</option>
-                        <option value="Bicepscurl">Bicepscurl</option>
+                        <!-- Bryst -->
+                        <optgroup label="Bryst">
+                            <option value="Benkpress">Benkpress</option>
+                            <option value="Skråbenk">Skråbenk</option>
+                            <option value="Flies">Flies</option>
+                            <option value="Push-ups">Push-ups</option>
+                        </optgroup>
+                        <!-- Ben -->
+                        <optgroup label="Ben">
+                            <option value="Knebøy">Knebøy</option>
+                            <option value="Leg Press">Leg Press</option>
+                            <option value="Leg Extension">Leg Extension</option>
+                            <option value="Leg Curl">Leg Curl</option>
+                            <option value="Calf Raises">Calf Raises</option>
+                        </optgroup>
+                        <!-- Rygg -->
+                        <optgroup label="Rygg">
+                            <option value="Markløft">Markløft</option>
+                            <option value="Pull-ups">Pull-ups</option>
+                            <option value="Rows">Rows</option>
+                            <option value="Lat Pulldown">Lat Pulldown</option>
+                        </optgroup>
+                        <!-- Skuldre -->
+                        <optgroup label="Skuldre">
+                            <option value="Skulderpress">Skulderpress</option>
+                            <option value="Lateral Raise">Lateral Raise</option>
+                            <option value="Front Raise">Front Raise</option>
+                            <option value="Face Pulls">Face Pulls</option>
+                        </optgroup>
+                        <!-- Armer -->
+                        <optgroup label="Armer">
+                            <option value="Bicepscurl">Bicepscurl</option>
+                            <option value="Triceps Extension">Triceps Extension</option>
+                            <option value="Hammer Curls">Hammer Curls</option>
+                            <option value="Skull Crushers">Skull Crushers</option>
+                        </optgroup>
+                        <!-- Core -->
+                        <optgroup label="Core">
+                            <option value="Sit-ups">Sit-ups</option>
+                            <option value="Planke">Planke</option>
+                            <option value="Russian Twist">Russian Twist</option>
+                            <option value="Cable Crunch">Cable Crunch</option>
+                        </optgroup>
                     </select>
-                    <input type="number" class="sett" placeholder="Antall sett" required min="1">
-                    <input type="number" class="reps" placeholder="Repetisjoner" required min="1">
-                    <input type="number" class="vekt" placeholder="Vekt (kg)" required min="0">
+                    <div class="sett-container">
+                        <div class="sett-gruppe">
+                            <input type="number" class="vekt" placeholder="Vekt (kg)" required min="0">
+                            <input type="number" class="reps" placeholder="Reps" required min="1">
+                            <button type="button" class="legg-til-sett">+</button>
+                        </div>
+                    </div>
                 </div>
+            </div>
+
+            <div class="form-group">
+                <label for="kommentar">Kommentar til økten:</label>
+                <textarea id="kommentar" rows="4" placeholder="Skriv en kommentar om økten..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="bilde">Legg til bilde:</label>
+                <input type="file" id="bilde" accept="image/*" capture="environment">
+                <div id="bilde-preview"></div>
             </div>
 
             <button type="button" id="leggTilOvelse">Legg til øvelse</button>
