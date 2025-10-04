@@ -1,11 +1,11 @@
 const CACHE_NAME = 'treningsdagbok-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/start.html',
-  '/css/style.css',
-  '/js/main.js',
-  '/manifest.json'
+  '/treningsdagbok/',
+  '/treningsdagbok/index.html',
+  '/treningsdagbok/start.html',
+  '/treningsdagbok/css/style.css',
+  '/treningsdagbok/js/main.js',
+  '/treningsdagbok/manifest.json'
 ];
 
 self.addEventListener('install', event => {

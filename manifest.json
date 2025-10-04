@@ -1,7 +1,7 @@
 {
     "name": "Treningsdagbok",
     "short_name": "Trening",
-    "start_url": "/index.html",
+    "start_url": "/treningsdagbok/index.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#333333",
