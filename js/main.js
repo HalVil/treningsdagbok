@@ -210,7 +210,7 @@ if (treningshistorikk) {
                 ovelse.sett.forEach((sett, index) => {
                     settHTML += `
                         <div class="sett-info">
-                            Sett ${index + 1}: ${sett.reps} reps @ ${sett.vekt}kg
+                            Sett ${index + 1}: ${sett.reps} reps, vekt ${sett.vekt}kg
                         </div>
                     `;
                 });
